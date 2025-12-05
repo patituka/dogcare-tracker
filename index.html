@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DogCare System 1.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"VT323"', 'monospace'],
+              display: ['"VT323"', 'monospace'],
+            },
+            colors: {
+              mac: {
+                black: '#000000',
+                white: '#FFFFFF',
+              }
+            },
+            boxShadow: {
+              'retro': '2px 2px 0px 0px #000000',
+              'retro-lg': '4px 4px 0px 0px #000000',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'VT323', monospace;
+        image-rendering: pixelated;
+        -webkit-font-smoothing: none;
+      }
+      
+      /* Classic Mac Desktop Dither Pattern (1-bit checkerboard) */
+      .bg-dither {
+        background-color: #ffffff;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpiYGBgAAJ0BSCBxwABBgASAgEBp1N3uAAAAABJRU5ErkJggg==');
+        background-repeat: repeat;
+        /* Removed opacity to prevent children from becoming transparent */
+      }
+
+      /* Mac Title Bar Stripes */
+      .bg-stripes {
+        background: repeating-linear-gradient(
+          180deg,
+          #000,
+          #000 1px,
+          #fff 1px,
+          #fff 3px
+        );
+      }
+      
+      /* Remove scrollbars for cleaner look */
+      ::-webkit-scrollbar {
+        width: 12px;
+        background: white;
+        border-left: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: white;
+        border: 2px solid black;
+        box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white overflow-hidden h-screen text-black">
+    <div id="root" class="h-full w-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

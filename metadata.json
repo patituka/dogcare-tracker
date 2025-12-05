@@ -1,0 +1,5 @@
+{
+  "name": "DogCare Tracker",
+  "description": "Une application de suivi de santé pour chien permettant de gérer les médicaments, vaccins et rappels, avec un suivi du poids.",
+  "requestFramePermissions": []
+}
